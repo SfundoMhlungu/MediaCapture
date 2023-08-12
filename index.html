@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Fundamentals</title>
+    <style>
+        *, *::after, *::before{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+      .media_display{
+           width: 100%;
+           height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 5px;
+      }
+      .media_snap,  .media_webcam {
+    
+        flex: 1;
+        display: grid;
+        place-content: center;
+        gap:10px;
+      
+
+      }
+
+   
+    </style>
+</head>
+<body>
+   
+    <div class="media_display">
+       <div class="media_snap">
+          <img id="img_preview" width="400" height="400" />
+          <button>snap📷</button>
+
+       </div>
+       <div class="media_webcam">
+        <video id="vid_preview" width="400" height="400" controls></video>
+        <button>record📹</button>
+        </div>
+    </div>
+
+
+    <script src="./src/app.js"></script>
+</body>
+</html>
